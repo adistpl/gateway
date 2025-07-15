@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/portfolio/:match*", "destination": "https://portfolio.vercel.app/:match*" },
+    { "source": "/todo/:match*", "destination": "https://todo.vercel.app/:match*" },
+    { "source": "/", "destination": "/_next/static/index.html" }
+  ]
+}
