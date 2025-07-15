@@ -1,7 +1,12 @@
 {
   "rewrites": [
-    { "source": "/portfolio/:match*", "destination": "https://portfolio.vercel.app/:match*" },
-    { "source": "/todo/:match*", "destination": "https://todo.vercel.app/:match*" },
-    { "source": "/", "destination": "/_next/static/index.html" }
+    {
+      "source": "/portfolio/:match*",
+      "destination": "https://portfolio-six-steel-88.vercel.app/:match*"
+    },
+    {
+      "source": "/note/:match*",
+      "destination": "https://note-app-gamma-three.vercel.app/:match*"
+    }
   ]
 }
