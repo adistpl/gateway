@@ -5,7 +5,7 @@
       "destination": "https://portfolio-six-steel-88.vercel.app/:match*"
     },
     {
-      "source": "/:match*",
+      "source": "/note/:match*",
       "destination": "https://note-app-29ed.onrender.com/:match*"
     }
   ]
