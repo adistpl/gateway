@@ -1,11 +1,32 @@
-export default function AboutPage() {
+// app/components/IframePaytm.js
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function IframePaytm() {
+  const [canEmbed, setCanEmbed] = useState(true);
+
+  useEffect(() => {
+    // Test embedding on client side
+    const testIframe = document.createElement("iframe");
+    testIframe.src = "https://paytm.com";
+    testIframe.onload = () => setCanEmbed(true);
+    testIframe.onerror = () => setCanEmbed(false);
+  }, []);
+
   return (
-    <main className="min-h-screen p-6 bg-gray-900 text-white">
-      <h1 className="text-3xl font-bold text-cyan-400 mb-4">👨‍💻 About Me</h1>
-      <p className="text-gray-300 leading-relaxed max-w-2xl">
-        Im a passionate full stack developer from India with expertise in building high-quality, scalable SaaS platforms.
-        I specialize in microfrontend architecture, event-driven systems, and production-grade Next.js applications.
-      </p>
-    </main>
-  )
+    <div className="w-full h-screen p-4">
+      {canEmbed ? (
+        <iframe
+          src="https://paytm.com"
+          className="w-full h-full border rounded-xl"
+          title="Paytm"
+        />
+      ) : (
+        <div className="text-red-500 text-center mt-10">
+          ❌ Paytm.com cannot be embedded in an iframe due to browser security policies.
+        </div>
+      )}
+    </div>
+  );
 }
