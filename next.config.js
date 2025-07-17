@@ -6,6 +6,8 @@
 const nextConfig = {
   basePath: '/note',
   assetPrefix: '/note',
+  output: 'export',
 };
 
 export default nextConfig;
+
